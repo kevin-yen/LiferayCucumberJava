@@ -36,11 +36,7 @@ public class StepDefinitions {
 		firefoxProfile.setPreference("dom.max_chrome_script_run_time", 300);
 		firefoxProfile.setPreference("dom.max_script_run_time", 300);
 
-		File file = new File("/opt/firefox/firefox");
-
-		FirefoxBinary firefoxBinary = new FirefoxBinary(file);
-
-		WebDriver webDriver = new FirefoxDriver(firefoxBinary, firefoxProfile);
+		WebDriver webDriver = new FirefoxDriver(firefoxProfile);
 
 		webDriver.get("http://www.google.com");
 
